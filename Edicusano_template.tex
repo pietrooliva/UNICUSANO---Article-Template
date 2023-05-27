@@ -1,0 +1,202 @@
+% !TEX encoding = UTF-8 Unicode
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Proceedings of the Niccolò Cusano Scientific Conferences (NCSC)
+%% LaTeX Template @ www.edicusano.it/LaTeX.html
+%% Version 1.1 (27/05/23)
+%%
+%%
+%% Original author: Pietro Oliva  --  e-mail: pietro.oliva@unicusano.it
+%% The CusanoTwo class was created by Pietro Oliva 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{CusanoOne}
+%%+++++++++++++++++++++++++++++++++++++++++
+%% PACKAGES: 
+%% THE COMMONLY USED ONES AND MUCH MORE
+%% ARE ALREADY LOADED IN THE CLASS
+%%+++++++++++++++++++++++++++++++++++++++++
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%!!!!!!
+\date{}%%don't need date to appear%%%!!!!!!
+\setcounter{Maxaffil}{0}%%%!!!!!!  === DON'T TOUCH ====
+\renewcommand\Affilfont{\itshape\footnotesize}%%%!!!!!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%!!!!!!
+
+
+%%%+++++++++++++++++++++++++++++++++++++++++
+%%	TITLE AND AUTHORS/AFFILIATION
+%%%+++++++++++++++++++++++++++++++++++++++++
+
+\title{A stunning title for your paper} % For titles, only capitalize the first letter
+
+\author[a]{John Doe}
+
+
+
+\affil[a]{Universit\`a degli Studi di Poggibonsi, Via qualcosa 22 – Rome, Italy}
+
+
+
+\maketitle % The \maketitle command is necessary to build the title page
+
+\begin{abstract}
+
+\lipsum[1]%%dummy text from lipsum package
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%
+%%   The first section must %
+%%    be "Introduction"        %
+%%%%%%%%%%%%%%%
+
+\introduction%%%DON'T TOUCH
+
+The beginning;  example of citing \cite{PhysRevB.49.3030, doi:10.1063/1.1935039}.
+Please use text sub and super scripts inline: \textsuperscript{90}Sr was used for A\textsubscript{one}.
+Numbers in the text line: In 2007 we spent \num{1500000} dollars for the experiment involving 1230 antennas and the measurement was 12,27\footnote{don't write $12,27$: it will cause extraspace}.
+
+\begin{equation}\label{eq:random}
+\ddx F=\ddt G=\tan{34\degree} \qquad \intl{0}{\infty}{f(x)}{x} \quad \pfrac{g(x,y)}{x}
+\end{equation}
+
+Referencing equation \eqref{eq:random}. Aligned formulas:
+\begin{equation}
+\begin{split}
+a & = b+c-d \\
+& = e-f \\
+& = g
+\end{split}
+\end{equation}
+SI units must be used both in math mode, $r=\SI{0.8768(11)e-15}{m}$, and in text: ``the Gas constant is expressed in \si{\joule\per\mole\per\kelvin}''. 
+%%please refer to siunitx package documentation
+
+\section{Results}\label{result}
+There are almost no limits to what you can use:
+
+Phonetic \textipa{ABCDEFGHIJKLMNOPQRSTUVWXYZ}
+
+Greek \greco{>Akous'ilaon d`e Q'aos m`en <upot'ijesja'i moi dokei t`hn pr'wthn >arq`hn}
+
+Cyrillic \textcyr{U jedna usta nosi vile i vetrovi, druga usta - izdat i zle bolesti}
+
+Runes \textara{bs\tripledot wib\doublecross nk jo\th soInw\sfour m} \textarl{hjmrst}
+
+Ornaments \adforn{26}\adforn{13}\adforn{3}\adforn{74}\adforn{62}\adforn{32} 
+\adforn{21}\quad\adforn{11}\quad\adforn{49}
+
+
+Olmec  \EOxiv \EOofficerII \EOtu \EOkij \EOeat \EOSprinkle \EOScorpius
+
+Etruscan    \textetr{abgdefghilmnopqrstuvxywz}
+
+Persian arcaic \textcopsn{\Occa \Ora \Oking\OAura\Oa\Oi\Ou\Oka}
+
+Fenician: \textphnc{abgdefghilmnopqrstuvxywz}
+
+Protosemitic \textproto{abgdefghilmn'opqrTtuvxSywz}
+
+Sud-Arabia Arcaic: \textsarab{abgdefghilmn'opqrTtuvxSywz}
+
+Various: \NoWash \NoBleech \IroningI \Industry \Info \Recycling \EUR  \CESign \Laserbeam \Biohazard \Radioactivity\Mercury \Venus \Mars
+
+Hebrew \begin{cjhebrew}
+b*:re’+siyt b*ArA’ ’E:lohiym ’et ha+s*
+Amayim w:’et hA’ArE.s; w:hA’ArE.s
+hAy:tAh tohU wAbohU w:.ho+sEk: ‘al--p*:ney t:hOm w:rU/a.h ’E:lohiym
+m:ra.hEpEt ‘al--p*:ney ham*Ayim;
+\end{cjhebrew}
+
+Arabic \begin{RLtext}
+fa-qAla lahu .sadIquhu: ’innI ’asma‘u .himAraka yA
+^gu.hA yanhaqu.  fa-qAla lahu ^gu.hA: .garIbuN ’amruka yA .sadIqI!
+’a-tu.saddiqu al-.himAra wa-tuka_d_dibunI?
+\end{RLtext}
+
+Moreover, if you really feel you have to insert a .jpg or a .png inline, you can do it like shown here: Tiamat (\inschar[height=2ex]{tiamat}) can be considered one of the most primordial goddesses. 
+
+\subsection{Simulations}
+
+\bit
+\item Hello.
+\item Goodbye.
+\eit
+\ben
+\item Hello.
+\item Goodbye.
+\een
+
+\subsubsection{Further discussion}
+
+Chemical can be included:
+\begin{center}
+\chemname{\chemfig{*6((-HO)-=%
+-(-(<[::60]OH)-[::-60]-%
+[::-60,,,2] HN-[::+60]CH_3)=%
+-(-HO)=)}}{Adrenalin}
+\end{center}
+
+
+\subsubsection{Special remarks}
+
+A tabular is used when text is prevailing:
+\begin{center}
+\begin{tabular}{lcr}
+\toprule
+Quantity & Symbol & Units \\
+\midrule
+force       & $F$     & newton \\
+energy    & $E$     & joule \\
+potential  & $V$     & volt \\
+\bottomrule
+\end{tabular}
+\end{center}
+while an array is preferred when math is important:
+\[
+\begin{array}{ll}
+\toprule
+f(x)   & f’(x) \\
+\midrule
+x^n    & nx^{n-1} \\
+e^x    & e^x \\
+\sin x & \cos x \\
+\bottomrule
+\end{array}
+\]
+%%%+++++++++++++++++++++++++++++++++++++++++
+%%	ACKNOWLEDGEMENTS
+%%%+++++++++++++++++++++++++++++++++++++++++
+
+\section*{Acknowledgements}
+This work (in particular section~\ref{intro}) was partially supported by a grant from Santa.
+
+
+
+%%%+++++++++++++++++++++++++++++++++++++++++
+%%	BIBLIOGRAPHY
+%%%+++++++++++++++++++++++++++++++++++++++++
+%% NCSC does not support submission of supporting .tex files such as BibTeX.
+%% All references must be included in the article .tex document. 
+%% If you use BibTeX, check the <filename>.bbl file into your
+%% .tex folder and copy the reference listings
+%% from your .bbl file using the following bibliography environment example.  
+\begin{thebibliography}{99}
+
+\bibitem{PhysRevB.49.3030}
+W.~Wu, S.~Fahy, Molecular-dynamics study of single-atom radiation damage in
+  diamond, Phys. Rev. B 49 (1994) 3030--3035.
+\newblock \href {http://dx.doi.org/10.1103/PhysRevB.49.3030}
+  {\path{doi:10.1103/PhysRevB.49.3030}}.
+
+\bibitem{doi:10.1063/1.1935039}
+A.~D. Sio, J.~Achard, A.~Tallaire, R.~S. Sussmann, A.~T. Collins, F.~Silva,
+  E.~Pace, Electro-optical response of a single-crystal diamond ultraviolet
+  photoconductor in transverse configuration, Applied Physics Letters 86~(21)
+  (2005) 213504--6.
+\newblock \href {http://dx.doi.org/10.1063/1.1935039}
+  {\path{doi:10.1063/1.1935039}}.
+
+\end{thebibliography}
+
+\end{document}
